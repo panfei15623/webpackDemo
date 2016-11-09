@@ -22,8 +22,8 @@ module.exports = {
 
     //入口文件输出配置
     output: {
-        path: path.resolve(__dirname,"./"),
-        publicPath: '/',
+        path: path.resolve(__dirname, './dist'),
+        publicPath: './',
         filename: 'bundle_[name].js'
     },
     module: {
@@ -53,6 +53,17 @@ module.exports = {
             //对所有entry实行这个规则
             minChunks: Infinity
         }),
+        //代码压缩混淆
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.DefinePlugin({
+            "process.env": {
+                NODE_ENV: JSON.stringify("production")
+            }
+        }),
         //把jquery作为全局变量插入到所有代码中，就可以直接在页面中使用jQuery了
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -62,7 +73,7 @@ module.exports = {
         //生成index.html页面
         new HtmlWebpackPlugin({
             title: 'webpack demo',  //设置title的名字
-            filename: 'indexDev.html',   //设置这个html的文件名
+            filename: 'index.html',   //设置这个html的文件名
             template: 'indexTem.html', //要使用的模块的路径
             inject: 'body', //把模板注入到哪个标签后
             minify: false, //是否压缩
@@ -74,11 +85,5 @@ module.exports = {
         new ExtractTextPlugin('[name].bundle.css',{
             allChunks: true
         })
-    ],
-    devtool: 'source-map',
-    devServer: {
-        contentBase: "./",
-        open: false
-    }
+    ]
 };
-

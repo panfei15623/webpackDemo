@@ -4,10 +4,8 @@
   "description": "webpack demo",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base ./",
-    "deploy": "set NODE_ENV=production&&webpack -p --progress --colors"
+    "build": "webpack --config webpack.config.prod.js --progress --color -p -d",
+    "dev": "webpack-dev-server --progress --colors --hot --inline"
   },
   "keywords": [
     "webpack"
@@ -21,6 +19,9 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
     "jsx-loader": "^0.13.2",
     "react": "^15.3.2",
     "react-router": "^3.0.0",
