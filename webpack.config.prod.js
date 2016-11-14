@@ -30,7 +30,7 @@ module.exports = {
         noParse: [pathToReact], //声明这个模块不需要parse查找依赖
         loaders: [
             {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css')},
-            {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!sass')},
+            {test: /\.less$/, loader: ExtractTextPlugin.extract('style', 'css!less')},
             {test: /\.js|jsx$/, exclude: /node_modules/, loaders: ['babel?presets[]=es2015,presets[]=react,presets[]=stage-0']},
             {test: /\.(woff|woff2|eot|ttf|otf)$/i, loader: 'url-loader?limit=8192'},
             {test:  /\.(jpe?g|png|gif|svg)$/i, loader: 'url?limit=25000'}

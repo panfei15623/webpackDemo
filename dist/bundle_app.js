@@ -204,8 +204,8 @@ function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}
 function(e,t,n){(function(e){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var r=n(/*! react */31),a=o(r),i=a.default.createClass({displayName:"Header",render:function(){return console.log(e("#container")),a.default.createElement("div",null,a.default.createElement("h2",{style:{textAlign:"center"}},"This is a webpack demo -- Automatic Refresh"))}});t.default=i}).call(t,n(/*! jquery */57))},/*!*************************!*\
   !*** ./src/js/index.js ***!
   \*************************/
-function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var r=n(/*! react */31),a=o(r),i=n(/*! react-dom */103),s=o(i);n(/*! ../css/main1.css */90);var u=n(/*! ./header */88),l=o(u),c=n(/*! ./content */87),p=o(c),d=a.default.createClass({displayName:"Container",render:function(){return a.default.createElement("div",null,a.default.createElement(l.default,null),a.default.createElement(p.default,null))}});s.default.render(a.default.createElement(d,null),document.getElementById("container"))},/*!***************************!*\
-  !*** ./src/css/main1.css ***!
+function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var r=n(/*! react */31),a=o(r),i=n(/*! react-dom */103),s=o(i);n(/*! ../css/main.less */90);var u=n(/*! ./header */88),l=o(u),c=n(/*! ./content */87),p=o(c),d=a.default.createClass({displayName:"Container",render:function(){return a.default.createElement("div",null,a.default.createElement(l.default,null),a.default.createElement(p.default,null))}});s.default.render(a.default.createElement(d,null),document.getElementById("container"))},/*!***************************!*\
+  !*** ./src/css/main.less ***!
   \***************************/
 function(e,t){},/*!********************************!*\
   !*** ./~/fbjs/lib/camelize.js ***!

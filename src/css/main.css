@@ -3,3 +3,6 @@ body {
   margin: 0px;
   background-color: lightblue;
 }
+#container {
+  padding: 0px 10px;
+}
