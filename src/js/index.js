@@ -4,8 +4,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import '../css/main1.css';
-//import '../css/main.scss';
+//import '../css/main1.css';
+import '../css/main.less';
 import Header from './header';
 import Content from './content';
 
