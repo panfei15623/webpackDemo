@@ -22,18 +22,18 @@
  出现webpack的版本号说明全局安装成功       
  
  三、安装Webpack及React     
- 1、创建本地项目webpackDemo
+ 1、创建本地项目webpackDemo        
  2、使用npm init命令初始化package.json文件   
  进入webapckDemo文件根目录，执行npm，按提示填写内容，填写完毕后在webpackDemo根目录就会生成package.json文件    
  3、本地项目安装webpack   
  进入webapckDemo文件根目录，执行npm install webpack --save-dev
- 安装成功之后，目录中增加node_modules文件
+ 安装成功之后，目录中增加node_modules文件      
  4、安装react、react-dom    
   npm install react --save-dev         
   npm install react-dom --save-dev      
   
- 四、目录结构demo
-  src文件夹存放demo相关文件（如css/js等）， 
+ 四、目录结构demo      
+  src文件夹存放demo相关文件（如css/js等），       
   dist文件夹存放生产模式下打包生成的文件，  
   indexTem.html为首页面模板，开发模式生成的首页面为indexDev.html（存放在内存中，目录中看不到）， 生产模式生成的首页面在dist文件下为index.html。  
   
