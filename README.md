@@ -2,7 +2,7 @@
  
  webpackDemo是在学习react+webpack的时候编写的demo文件，该demo可以在开发模式、生产模式运行，其中涉及到React、ES6、Less、Webpack的集成，以及Webpack高级配置。  
  
- 使用说明：
+ 使用说明：    
  1>demo下载之后，删除node_modules文件夹（提交的时候失误，本不应提交该文件夹），然后执行运行->cmd，切换到文件根目录，执行npm install安装依赖模块；    
  2>运行开发模式，在文件根目录下执行npm run dev，执行成功后，在浏览器中打开http://localhost:8080/indexDev.html，则可以看到渲染出来的页面（打包后的文件存在内存里，目录里看不到）；    
  3>运行生产模式，在项目根目录下执行npm run build，执行成功后，在浏览器中访问dist文件夹下生成的index.html，则可以看到渲染出来的页面（打包后的文件在dist文件夹下）。      
@@ -99,8 +99,17 @@
       --progress //显示进度条   
       --color //添加颜色   
       
+   总结：    
+   output里的path、publicPath的区别，比较容易搞混     
+   我在文档中看到：    
+      “path”仅仅告诉Webpack结果存储在哪里，然而“publicPath”项则被许多Webpack的插件用于在生产模式下更新内嵌到css、html文件里的url值。    
+       例如，在localhost（译者注：即本地开发模式）里的css文件中你可能用“./test.png”这样的url来加载图片，但是在生产模式下“test.png”文件可能会定位到CDN上并且你的Node.js服务器可能是运行在HeroKu上边的。这就意味着在生产环境你必须手动更新所有文件里的url为CDN的路径。      
+       然而你也可以使用Webpack的“publicPath”选项和一些插件来在生产模式下编译输出文件时自动更新这些url。    
+       
+   我的理解：path为webapck打包后的文件存储的路径，publicPath会被加到在link或者script或者css中引用的路径里       
    
-   在学习过程中有个难题没有解决，开始想用sass编写css文件，但是用webpack打包的过程中，需要node-sass模块，不知道什么原因该模块一直安装不上，可能是国内网速原因，那有什么办法可以装上吗，淘宝镜像会让webstorm卡死，如果   有大神知道，请指教。         
+   遗留问题：        
+   开始想用sass编写css文件，但是用webpack打包的过程中，需要node-sass模块，不知道什么原因该模块一直安装不上，可能是国内网速原因，那有什么办法可以装上吗，淘宝镜像会让webstorm卡死，如果有大神知道，请指教。         
    
    demo中如有问题或者建议欢迎指正。   
    
